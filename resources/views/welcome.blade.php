@@ -10,6 +10,12 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <!-- Fonts -->
+        <link href="../../node_modules/foundation-sites/dist/css/foundation.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Fonts -->
+        <link href="../../node_modules/foundation-sites/assets/foundation.scss" rel="stylesheet" type="text/css">
+
         <!-- Styles -->
         <style>
             html, body {
@@ -79,7 +85,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <p>Laravel</p>
                 </div>
 
                 <div class="links">
