@@ -20,7 +20,7 @@
 
                                 <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <input id="category" placeholder="New Category Name" type="text" class="form-control" name="category" value="{{ old('category') }}" required autofocus>
 
                                         @if ($errors->has('category'))
@@ -29,12 +29,12 @@
                                     </span>
                                         @endif
                                     </div>
-                                </div>
+                                </div> 
 
                                 <div class="form-group">
-                                    <div class="col-md-8 col-md-offset-4">
+                                    <div class="col-md-12">
                                         <button type="submit" class="btn btn-primary">
-                                            ADD CATEGORY
+                                            <span style="font-size: 25px;" class="glyphicon glyphicon-plus"></span>&nbsp;ADD NEW CATEGORY
                                         </button>
                                     </div>
                                 </div>
