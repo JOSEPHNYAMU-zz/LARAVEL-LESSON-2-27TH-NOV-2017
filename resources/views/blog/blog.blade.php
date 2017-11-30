@@ -33,7 +33,7 @@
                                 <div class="form-group{{ $errors->has('content') ? ' has-error' : '' }}">
 
                                     <div class="col-md-12">
-                                        <textarea id="content" placeholder="Content" type="text" class="form-control" name="content" value="{{ old('content') }}" required autofocus>
+                                        <textarea rows="10" id="content" placeholder="Content" type="text" class="form-control" name="content" value="{{ old('content') }}" required autofocus>
 
                                         </textarea>
                                         @if ($errors->has('content'))

@@ -17,7 +17,7 @@
             @endif
 
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Available Blogs</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -26,7 +26,15 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    @if(count($posts) > 0)
+                        @foreach($posts->all() as $post)
+                            <h4 style="color:#000000;">{{ $post->title }}</h4>
+                            <img height="100px" width="100px" style="float:left;margin-right:10px;" src="{{ $post->image }}" alt="Image"/>
+                            <p style="text-align: justify;">{{ $post->content }}</p><br/><br/>
+                            @endforeach
+                        @else
+                        <p>No Posts Available!</p>
+                        @endif
                 </div>
             </div>
         </div>

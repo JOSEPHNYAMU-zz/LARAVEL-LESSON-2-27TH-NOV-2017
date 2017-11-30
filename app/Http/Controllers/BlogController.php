@@ -36,7 +36,7 @@ class BlogController extends Controller
             $file = Input::file('image');
             $file -> move(public_path(). '/blogs/',
                 $file->getClientOriginalName());
-            $url = URl::to("/") . '/blogs' .
+            $url = URl::to("/") . '/blogs/' .
                 $file->getClientOriginalName();
         }
 
