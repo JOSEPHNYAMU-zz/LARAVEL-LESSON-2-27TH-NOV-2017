@@ -4,17 +4,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                @if(count($errors) > 0 )
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger">
+                            {{$error}}
+                        </div>
+                    @endforeach
+                @endif
+                @if(session('response'))
+                    <div class="alert alert-success">{{session('response')}}</div>
+                @endif
                 <div class="panel panel-default">
                     <div class="panel-heading">Category</div>
-
                     <div class="panel-body">
                         @if (session('status'))
                             <div class="alert alert-success">
                                 {{ session('status') }}
                             </div>
                         @endif
-
-
                             <form class="form-horizontal" method="POST" action="{{ url('/addCategory') }}">
                                 {{ csrf_field() }}
 

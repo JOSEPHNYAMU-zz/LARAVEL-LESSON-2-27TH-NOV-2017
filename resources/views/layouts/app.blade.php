@@ -35,12 +35,13 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
+
+                    @guest
+                        @else
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/blog') }}">New Blog</a></li>
-                        <li><a href="{{ url('/users') }}">Users</a></li>
-
                     </ul>
-
+                        @endguest
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -55,13 +56,10 @@
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="{{ url('/profile') }}">Profile</a>
+                                        <a href="{{ url('/profile') }}">Deactivate</a>
                                     </li>
                                     <li>
                                         <a href="{{ url('/category') }}">Categories</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('/settings') }}">Account Settings</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('logout') }}"

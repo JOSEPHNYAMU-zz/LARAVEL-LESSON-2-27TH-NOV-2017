@@ -24,4 +24,5 @@ Route::get('/settings', 'SettingsController@settings');
 Route::get('/blog', 'BlogController@blog');
 Route::get('/users', 'UsersController@users');
 Route::post('/addCategory', 'CategoryController@addCategory');
+Route::post('/addBlog', 'BlogController@addBlog');
 
